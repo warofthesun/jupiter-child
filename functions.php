@@ -51,6 +51,25 @@ acf_add_local_field_group(array(
 	'title' => 'Result Information',
 	'fields' => array(
 		array(
+			'key' => 'field_5c685cc7ff4b7',
+			'label' => 'Page Title',
+			'name' => 'page_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '30',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
 			'key' => 'field_5c689d081a126',
 			'label' => 'Page Header',
 			'name' => 'page_header',
@@ -75,23 +94,28 @@ acf_add_local_field_group(array(
 			'mime_types' => '',
 		),
 		array(
-			'key' => 'field_5c685cc7ff4b7',
-			'label' => 'Page Title',
-			'name' => 'page_title',
-			'type' => 'text',
+			'key' => 'field_5c69bb833f0d7',
+			'label' => 'Choose page options',
+			'name' => 'choose_page_options',
+			'type' => 'radio',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
-				'width' => '30',
+				'width' => '',
 				'class' => '',
 				'id' => '',
 			),
+			'choices' => array(
+				'Survey Page' => 'Survey Page',
+				'Results Page' => 'Results Page',
+			),
+			'allow_null' => 1,
+			'other_choice' => 0,
 			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+			'save_other_choice' => 0,
 		),
 		array(
 			'key' => 'field_5c68b07c1716b',
@@ -100,7 +124,15 @@ acf_add_local_field_group(array(
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5c69bb833f0d7',
+						'operator' => '==',
+						'value' => 'Survey Page',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -119,9 +151,17 @@ acf_add_local_field_group(array(
 			'type' => 'number',
 			'instructions' => 'If this is a result page, indicate which result this is: 1–5',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5c69bb833f0d7',
+						'operator' => '==',
+						'value' => 'Results Page',
+					),
+				),
+			),
 			'wrapper' => array(
-				'width' => '20',
+				'width' => '40',
 				'class' => '',
 				'id' => '',
 			),
@@ -140,7 +180,15 @@ acf_add_local_field_group(array(
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5c69bb833f0d7',
+						'operator' => '==',
+						'value' => 'Results Page',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -159,7 +207,15 @@ acf_add_local_field_group(array(
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5c69bb833f0d7',
+						'operator' => '==',
+						'value' => 'Results Page',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -192,5 +248,7 @@ acf_add_local_field_group(array(
 ));
 
 endif;
+
+
 
 ?>

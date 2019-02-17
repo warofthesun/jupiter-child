@@ -36,8 +36,16 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
   .ui-dialog.survey .ui-dialog-content {
     padding: 2em;
     text-align: center; }
+    .ui-dialog.survey .ui-dialog-content h1.result-1 {
+      color: #23a9e1; }
     .ui-dialog.survey .ui-dialog-content h1.result-2 {
-      color: #1a6092; }
+      color: #1b76a0; }
+    .ui-dialog.survey .ui-dialog-content h1.result-3 {
+      color: #f89520; }
+    .ui-dialog.survey .ui-dialog-content h1.result-4 {
+      color: #8cc640; }
+    .ui-dialog.survey .ui-dialog-content h1.result-5 {
+      color: #f8d82e; }
     .ui-dialog.survey .ui-dialog-content #button {
       background-color: #aed578;
       color: #464646;
@@ -107,7 +115,6 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
   /* Phones */ }
   .psycographic_survey .header-bg {
     margin-bottom: 5em;
-    height: 50vh;
     width: 100%;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -121,6 +128,10 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    @media only screen and (min-width: 64em) {
+      .psycographic_survey .header-bg {
+        height: 70vh;
+        max-height: 550px; } }
   .psycographic_survey .overlay {
     width: 100%;
     height: 100%;
@@ -144,12 +155,17 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
       color: #fff;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
       text-align: center; }
+      @media only screen and (max-width: 64em) {
+        .psycographic_survey .overlay h1 {
+          margin: 1em 0; } }
     .psycographic_survey .overlay h2 {
       color: #fff;
-      width: 60vw;
       max-width: 900px;
       text-align: center;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
+      @media only screen and (min-width: 64em) {
+        .psycographic_survey .overlay h2 {
+          width: 60vw; } }
   .psycographic_survey ul {
     list-style-type: none; }
     .psycographic_survey ul li:before {
