@@ -5,9 +5,259 @@ Description: Jupiter Child Theme
 Author: Dan Brown
 Author URL: http://thesplitpixel.com
 Template: jupiter
-Version: 0.0.1
+Version: 1.0.1
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
+.ui-dialog.survey {
+  width: 100% !important;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  z-index: 99; }
+  .ui-dialog.survey .ui-dialog-titlebar {
+    padding: .5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: rgba(0, 0, 0, 0.34);
+    border-radius: 6px 6px 0 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #62ade3; }
+    .ui-dialog.survey .ui-dialog-titlebar .ui-dialog-titlebar-close {
+      margin-left: auto;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba(26, 96, 146, 0.5); }
+  .ui-dialog.survey .ui-dialog-content {
+    padding: 2em;
+    text-align: center; }
+    .ui-dialog.survey .ui-dialog-content h1.result-2 {
+      color: #1a6092; }
+    .ui-dialog.survey .ui-dialog-content #button {
+      background-color: #aed578;
+      color: #464646;
+      padding: 1em 1.3em;
+      -webkit-transition: all .5s;
+      transition: all .5s;
+      line-height: 1.5; }
+      @media only screen and (max-width: 75em) {
+        .ui-dialog.survey .ui-dialog-content #button {
+          display: block; } }
+      .ui-dialog.survey .ui-dialog-content #button:hover {
+        background-color: #97c951;
+        color: #fff; }
+  .ui-dialog.survey #result {
+    margin-top: 1em;
+    font-weight: 700;
+    padding-bottom: .5em; }
+    .ui-dialog.survey #result.result-1 {
+      border-bottom: 1px solid #23a9e1; }
+    .ui-dialog.survey #result.result-2 {
+      border-bottom: 1px solid #1b76a0; }
+    .ui-dialog.survey #result.result-3 {
+      border-bottom: 1px solid #f89520; }
+    .ui-dialog.survey #result.result-4 {
+      border-bottom: 1px solid #8cc640; }
+    .ui-dialog.survey #result.result-5 {
+      border-bottom: 1px solid #f8d82e; }
+  .ui-dialog.survey .result-email {
+    line-height: 1.5;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-style: italic; }
+  .ui-dialog.survey .result-summary {
+    line-height: 1.5;
+    margin: 2em 1em;
+    font-size: 1.3em; }
 
-/*# sourceMappingURL=styles.css.map */
+.five-col-wrap.wpb_row .vc_col-sm-2 {
+  float: left;
+  width: 18.8%;
+  padding: 0;
+  margin-right: 1.5%;
+  min-height: 0; }
+  @media only screen and (max-width: 48em) {
+    .five-col-wrap.wpb_row .vc_col-sm-2 {
+      width: 100%; } }
+  .five-col-wrap.wpb_row .vc_col-sm-2 div[id^="text-block-"] {
+    text-align: center !important; }
+  .five-col-wrap.wpb_row .vc_col-sm-2 .mk-text-block a {
+    font-weight: bold;
+    font-size: .9em; }
+    .five-col-wrap.wpb_row .vc_col-sm-2 .mk-text-block a.result-one {
+      color: #23a9e1; }
+    .five-col-wrap.wpb_row .vc_col-sm-2 .mk-text-block a.result-two {
+      color: #1b76a0; }
+    .five-col-wrap.wpb_row .vc_col-sm-2 .mk-text-block a.result-three {
+      color: #f89520; }
+    .five-col-wrap.wpb_row .vc_col-sm-2 .mk-text-block a.result-four {
+      color: #8cc640; }
+    .five-col-wrap.wpb_row .vc_col-sm-2 .mk-text-block a.result-five {
+      color: #f8d82e; }
+
+.five-col-wrap .five-col-last {
+  margin: 0 !important; }
+
+.psycographic_survey {
+  /* Phones */ }
+  .psycographic_survey .header-bg {
+    margin-bottom: 5em;
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .psycographic_survey .overlay {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: rgba(0, 0, 0, 0.4); }
+    .psycographic_survey .overlay h1 {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      text-align: center; }
+    .psycographic_survey .overlay h2 {
+      color: #fff;
+      width: 60vw;
+      max-width: 900px;
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
+  .psycographic_survey ul {
+    list-style-type: none; }
+    .psycographic_survey ul li:before {
+      content: "\f058";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+      color: #aed578;
+      margin-right: .5em; }
+  .psycographic_survey blockquote {
+    padding: 2em 2em 1em;
+    border-radius: .5em; }
+    .psycographic_survey blockquote p {
+      font-size: 1.5em;
+      text-align: center; }
+      .psycographic_survey blockquote p:before, .psycographic_survey blockquote p:after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.1); }
+      .psycographic_survey blockquote p:before {
+        content: "\f10d"; }
+      .psycographic_survey blockquote p:after {
+        content: "\f10e"; }
+  .psycographic_survey .wvhButton {
+    background-color: #a2cf65;
+    color: white;
+    padding: 10px 20px;
+    border: 0px;
+    margin-top: 20px; }
+  .psycographic_survey #wvhPsychographicPlugin {
+    width: 500px;
+    margin: 20px auto;
+    clear: both; }
+  .psycographic_survey .wvhButton:hover {
+    background-color: #97c06d; }
+  .psycographic_survey label {
+    font-weight: bold;
+    line-height: normal; }
+  .psycographic_survey #wvhPaywall label {
+    display: block;
+    width: 140px;
+    text-align: left;
+    padding-right: 20px;
+    margin-top: .5em; }
+  .psycographic_survey #wvhPaywall input {
+    width: 100%;
+    border-radius: 3px;
+    margin: .5em 0 1em;
+    background: #f6f6f6;
+    padding: 10px; }
+  .psycographic_survey #wvhSurvey label {
+    display: block;
+    margin-bottom: .5em; }
+  .psycographic_survey .wvhRadioWrapper {
+    margin: 1em;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal; }
+  .psycographic_survey .wvhRadioWrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .psycographic_survey .wvhRadioWrapper .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%; }
+  .psycographic_survey .wvhRadioWrapper .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1a6092; }
+  .psycographic_survey .wvhRadioWrapper:hover input ~ .checkmark {
+    background-color: #ccc; }
+  .psycographic_survey .wvhRadioWrapper input:checked ~ .checkmark {
+    background-color: #62ade3; }
+  .psycographic_survey .wvhRadioWrapper input:checked ~ .checkmark:after {
+    display: block; }
+  .psycographic_survey .wvhQuestion {
+    border-bottom: 1px solid rgba(6, 24, 36, 0.11);
+    margin-bottom: 2em;
+    padding-bottom: 2em; }
+  .psycographic_survey #question-12 {
+    border-bottom: 0px; }
+  @media only screen and (min-width: 320px) and (max-width: 479px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 300px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 400px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 500px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1999px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 500px; } }

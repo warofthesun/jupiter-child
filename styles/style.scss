@@ -9,3 +9,342 @@ Version: 1.0.1
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
+
+$blue: #62ade3;
+$blue-lt: lighten($blue, 30%);
+$blue-dk: darken($blue, 30%);
+$green: #aed578;
+$orange: #e09245;
+
+$result-one: #23a9e1; //open to options
+$result-two: #1b76a0; //dr knows best
+$result-three: #f89520; //for the family
+$result-four: #8cc640; //healthy for life
+$result-five: #f8d82e; //live for today
+
+.ui-dialog.survey {
+    width: 100% !important;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    z-index: 99;
+
+
+  .ui-dialog-titlebar {
+    padding: .5em;
+    display: flex;
+    color: rgba(0, 0, 0, 0.34);
+    border-radius: 6px 6px 0 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: $blue;
+
+    .ui-dialog-titlebar-close {
+      margin-left: auto;
+      border: 0;
+      background: transparent;
+      color: #fff;
+      text-shadow: 1px 1px 1px rgba($blue-dk, 0.5);
+    }
+  }
+
+  .ui-dialog-content {
+    padding: 2em;
+    text-align: center;
+
+    h1 {
+      &.result-2 {
+        color: $blue-dk;
+      }
+    }
+
+    #button {
+      background-color: $green;
+      color: #464646;
+      padding: 1em 1.3em;
+      transition: all .5s;
+      line-height: 1.5;
+
+      @media only screen and (max-width: 75em) {
+        display: block;
+      }
+
+      &:hover {
+        background-color: darken($green, 10%);
+        color: #fff;
+      }
+    }
+  }
+
+  #result {
+    margin-top: 1em;
+    font-weight: 700;
+    padding-bottom: .5em;
+
+    &.result-1 {
+      border-bottom: 1px solid $result-one;
+    }
+
+    &.result-2 {
+      border-bottom: 1px solid $result-two;
+    }
+
+    &.result-3 {
+      border-bottom: 1px solid $result-three;
+    }
+
+    &.result-4 {
+      border-bottom: 1px solid $result-four;
+    }
+
+    &.result-5 {
+      border-bottom: 1px solid $result-five;
+    }
+  }
+
+  .result {
+    &-email {
+      line-height: 1.5;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      font-style: italic;
+    }
+
+    &-summary {
+      line-height: 1.5;
+      margin:2em 1em;
+      font-size: 1.3em;
+    }
+  }
+}
+
+.five-col-wrap.wpb_row .vc_col-sm-2 {
+  float: left;
+
+  @media only screen and (max-width: 48em) {
+    width: 100%;
+  }
+
+  width: 18.8%;
+  padding: 0;
+  margin-right: 1.5%;
+  min-height: 0;
+
+  div[id^="text-block-"] {
+    text-align: center !important;
+  }
+
+  .mk-text-block {
+    a {
+      font-weight: bold;
+      font-size: .9em;
+
+      &.result-one {
+        color: $result-one;
+      }
+
+      &.result-two {
+        color: $result-two;
+      }
+
+      &.result-three {
+        color: $result-three;
+      }
+
+      &.result-four {
+        color: $result-four;
+      }
+
+      &.result-five {
+        color: $result-five;
+      }
+    }
+  }
+}
+
+.five-col-wrap .five-col-last {
+  margin: 0 !important;
+}
+
+.psycographic_survey {
+
+  .header-bg {
+    margin-bottom: 5em;
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+
+    h1 {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    h2 {
+      color: #fff;
+      width: 60vw;
+      max-width: 900px;
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      &:before {
+        content: "\f058";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 400;
+        color: $green;
+        margin-right: .5em;
+      }
+    }
+  }
+
+  blockquote {
+    padding: 2em 2em 1em;
+    border-radius: .5em;
+
+    p {
+      font-size: 1.5em;
+      text-align: center;
+
+      &:before, &:after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        color: rgba(0,0,0, 0.1);
+      }
+
+      &:before {
+        content: "\f10d";
+      }
+
+      &:after {
+        content: "\f10e";
+      }
+    }
+  }
+
+
+.wvhButton {
+  background-color: #a2cf65;
+  color: white;
+  padding: 10px 20px;
+  border: 0px;
+  margin-top: 20px; }
+
+#wvhPsychographicPlugin {
+  width: 500px;
+  margin: 20px auto;
+  clear: both; }
+
+.wvhButton:hover {
+  background-color: #97c06d; }
+
+label {
+  font-weight: bold;
+  line-height: normal; }
+
+#wvhPaywall label {
+  display: block;
+  width: 140px;
+  text-align: left;
+  padding-right: 20px;
+  margin-top: .5em; }
+
+#wvhPaywall input {
+  width: 100%;
+  border-radius: 3px;
+  margin: .5em 0 1em;
+  background: #f6f6f6;
+  padding: 10px; }
+
+#wvhSurvey label {
+  display: block;
+  margin-bottom: .5em; }
+
+.wvhRadioWrapper {
+  margin: 1em;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: normal; }
+  .wvhRadioWrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .wvhRadioWrapper .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%; }
+    .wvhRadioWrapper .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 6px;
+      left: 6px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #1a6092; }
+  .wvhRadioWrapper:hover input ~ .checkmark {
+    background-color: #ccc; }
+  .wvhRadioWrapper input:checked ~ .checkmark {
+    background-color: #62ade3; }
+  .wvhRadioWrapper input:checked ~ .checkmark:after {
+    display: block; }
+
+.wvhQuestion {
+  border-bottom: 1px solid rgba(6, 24, 36, 0.11);
+  margin-bottom: 2em;
+  padding-bottom: 2em; }
+
+#question-12 {
+  border-bottom: 0px; }
+
+/* Phones */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  #wvhPsychographicPlugin {
+    width: 300px; } }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  #wvhPsychographicPlugin {
+    width: 400px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #wvhPsychographicPlugin {
+    width: 500px; } }
+@media only screen and (min-width: 992px) and (max-width: 1999px) {
+  #wvhPsychographicPlugin {
+    width: 500px; } }
+
+}
+
+/*# sourceMappingURL=wvhPluginStyles.css.map */
