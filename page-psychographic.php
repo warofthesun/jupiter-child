@@ -48,7 +48,7 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
 <?php get_footer(); ?>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <div id="dialog" class="test" title="<?php the_field('page_title'); ?>">
-  <h4 id="message">Drumroll please...<br />your healthcare profile is…</h4>
+  <h4 id="message">Drumroll please...<br />your healthcare engagement profile is…</h4>
   <h1 id="result" class="result-<?php the_field('result_number'); ?>"><?php the_field('page_title'); ?>!</h1>
 
   <div class="result">

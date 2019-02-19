@@ -161,7 +161,7 @@ acf_add_local_field_group(array(
 				),
 			),
 			'wrapper' => array(
-				'width' => '40',
+				'width' => '20',
 				'class' => '',
 				'id' => '',
 			),
