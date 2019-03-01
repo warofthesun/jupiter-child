@@ -1,9 +1,7 @@
 <?php
 /*
- Template Name: Psychographic Survey
+ Template Name: Image Header
 */
-
-//page-custom
 
 get_header(); ?>
 <div class="psycographic_survey">
@@ -55,7 +53,7 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
     <div class="result-summary">
       <?php the_field('result_description'); ?>
     </div>
-  <a id="button" class="close_button" href="#">Learn more about the <strong><?php the_field('page_title'); ?></strong> profile</a>
+  <a id="button" class="close_button" href="#">Learn more about your <strong><?php the_field('page_title'); ?></strong> profile</a>
   <div class="result-email">
     <?php the_field('result_email'); ?>
   </div>
