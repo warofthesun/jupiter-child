@@ -22,7 +22,7 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
 
 <div style="background:url(<?php echo $thumb; ?>);" class="header-bg">
 <div class="overlay">
-  <h1><?php the_field('page_title'); ?></h1>
+  <h1><?php if( get_field('page_title') ) : the_field('page_title'); else : echo the_title(); endif; ?></h1>
   <?php if( get_field('page_subtitle') ) : ?>
     <h2> <?php the_field('page_subtitle'); ?></h2>
   <?php endif; ?>
