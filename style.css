@@ -9,6 +9,27 @@ Version: 1.0.7
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
+.flexible_content .headline {
+  text-align: center;
+  font-size: 1.6em;
+  color: #0b273b;
+  padding: 1em; }
+
+.flexible_content .content_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #edf3f5;
+  height: 600px; }
+  .flexible_content .content_row .background_image {
+    padding: 0;
+    background-position: center;
+    background-size: cover; }
+  .flexible_content .content_row .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(98, 173, 227, 0.6); }
+
 .ui-dialog.survey {
   width: 100% !important;
   max-width: 600px;
