@@ -23,31 +23,119 @@ $result-three: #f89520; //for the family
 $result-four: #8cc640; //healthy for life
 $result-five: #f8d82e; //live for today
 
-.flexible_content {
+ul.flexible_content-container {
+  margin: 0;
+  list-style-type: none;
+    li {
+      margin: 0;
+      list-style-type: none;
+      margin-top: 3em;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:nth-of-type(even) {
+        .content_row {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+  .flexible_content {
+  .mk-grid {
+    margin: 0 auto;
+  }
+
   .headline {
     text-align: center;
-    font-size: 1.6em;
-    color: $blue-dk;
     padding: 1em;
-  }
 
-  .content_row {
-    display:flex;
-    background:#edf3f5;
-    height:600px;
-
-    .background_image {
-      padding:0;
-      background-position: center;
-      background-size: cover;
-    }
-
-    .overlay {
-      height: 100%;
-      width: 100%;
-      background-color:rgba($blue, 0.6);
+    p {
+      font-size: 1.6em;
+      color: $blue-dk;
     }
   }
+
+  .content_container {
+    background-color: #f8f8f8;
+
+    .content_row {
+      display:flex;
+
+      @media only screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        height: auto;
+      }
+
+      height:600px;
+
+      .background_image {
+        padding:0;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        &.blue {
+          background-color:rgba($blue, 0.6);
+        }
+
+        &.orange {
+          background-color:rgba($orange, 0.6);
+        }
+
+        &.green {
+          background-color:rgba($green, 0.6);
+        }
+
+        img {
+          width: 90%;
+          height: auto;
+        }
+      }
+
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        padding: 1em;
+
+        p {
+          font-size: 1.6em;
+
+          strong {
+            font-size: 1.2em;
+          }
+        }
+
+        &.blue {
+          strong {
+            color: $blue;
+          }
+        }
+
+        &.orange {
+          strong {
+            color: $orange;
+          }
+        }
+
+        &.green {
+          strong {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+}
 }
 
 .ui-dialog.survey {

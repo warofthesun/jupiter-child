@@ -28,48 +28,77 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
   <?php endif; ?>
 </div>
 </div>
+</div>
 <?php
 
-$image = get_field('image_test');
+// check if the repeater field has rows of data
+if( have_rows('hero_section') ): ?>
+<ul class="flexible_content-container">
 
-if( !empty($image) ):
-  // vars
-	$url = $image['url'];
-	$title = $image['title'];
-	$alt = $image['alt'];
-	$caption = $image['caption'];
 
-	// thumbnail
-	$size = 'large';
-	$thumb = $image['sizes'][ $size ];
-	$width = $image['sizes'][ $size . '-width' ];
-	$height = $image['sizes'][ $size . '-height' ]; ?>
+ 	<?php // loop through the rows of data
+    while ( have_rows('hero_section') ) : the_row(); ?>
 
-<?php endif; ?>
-<div class="flexible_content">
-	<div class="mk-grid">
-		<div class="vc_row headline">
-			With Wellview Profiling, participants are more than twice as likely to open and read a health communication, and more than 9 times more likely to click and take action.
-		</div>
-		<div class="vc_row content_row">
-			<div class="vc_col-sm-3 vc_col-md-7 background_image" style="background-image:url('<?php echo $thumb; ?>');">
-				<div class="overlay">
-					<img src="<?php the_field('inner_image'); ?>" alt="" />
+		<li class="flexible_content">
+				<div class="vc_row headline mk-grid">
+					<?php the_sub_field('headline'); ?>
 				</div>
-			</div>
-			<div class="vc_col-sm-9 vc_col-md-5" style="display:flex;justify-content:center;align-items:center;">
-				Wellview Profiled
-				55% Opens/Reads
-				31% Clicks
+				<div class="content_container">
+					<div class="vc_row content_row mk-grid">
+						<?php
 
-				Industry Average*
-				24.7% Opens/Reads
-				3.3% Clicks
-			</div>
-		</div>
-	</div>
-</div>
+						$image = get_sub_field('hero_image');
 
+						if( !empty($image) ):
+						  // vars
+							$url = $image['url'];
+
+							// thumbnail
+							$size = 'large';
+							$thumb = $image['sizes'][ $size ]; ?>
+
+						<?php endif; ?>
+					<div class="vc_col-xs-12 vc_col-md-7 background_image" style="background-image:url('<?php echo $thumb; ?>');">
+						<div class="overlay <?php the_sub_field('overlay_color'); ?>">
+
+								<?php
+
+								$image = get_sub_field('inner_image');
+								if( !empty($image) ):
+
+								  // vars
+									$url = $image['url'];
+									$alt = $image['alt'];
+
+									// thumbnail
+									$size = 'large';
+									$thumb = $image['sizes'][ $size ];
+									$width = $image['sizes'][ $size . '-width' ];
+									$height = $image['sizes'][ $size . '-height' ]; ?>
+
+
+								<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>" />
+							<?php endif; ?>
+						</div>
+					</div>
+					<div class="vc_col-xs-12 vc_col-md-5 content <?php the_sub_field('overlay_color'); ?>">
+						<div>
+							<?php the_sub_field('detail_content'); ?>
+						</div>
+					</div>
+				</div>
+				</div>
+		</li>
+
+	<?php endwhile; ?>
+	</ul>
+<?php else :
+
+    // no rows found
+
+endif;
+
+?>
 
 <?php mk_build_main_wrapper( mk_get_view('singular', 'wp-page', true) ); ?>
 </div>
@@ -88,16 +117,3 @@ if( !empty($image) ):
     </script>
 <?php get_footer(); ?>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<div id="dialog" class="test" title="<?php the_field('page_title'); ?>">
-  <h4 id="message">Drumroll please...<br />your healthcare engagement profile is…</h4>
-  <h1 id="result" class="result-<?php the_field('result_number'); ?>"><?php the_field('page_title'); ?>!</h1>
-
-  <div class="result">
-    <div class="result-summary">
-      <?php the_field('result_description'); ?>
-    </div>
-  <a id="button" class="close_button" href="#">Learn more about your <strong><?php the_field('page_title'); ?></strong> profile</a>
-  <div class="result-email">
-    <?php the_field('result_email'); ?>
-  </div>
-</div>

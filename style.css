@@ -9,26 +9,86 @@ Version: 1.0.7
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
-.flexible_content .headline {
-  text-align: center;
-  font-size: 1.6em;
-  color: #0b273b;
-  padding: 1em; }
-
-.flexible_content .content_row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #edf3f5;
-  height: 600px; }
-  .flexible_content .content_row .background_image {
-    padding: 0;
-    background-position: center;
-    background-size: cover; }
-  .flexible_content .content_row .overlay {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(98, 173, 227, 0.6); }
+ul.flexible_content-container {
+  margin: 0;
+  list-style-type: none; }
+  ul.flexible_content-container li {
+    margin: 0;
+    list-style-type: none;
+    margin-top: 3em; }
+    ul.flexible_content-container li:first-of-type {
+      margin-top: 0; }
+    ul.flexible_content-container li:nth-of-type(even) .content_row {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+  ul.flexible_content-container .flexible_content .mk-grid {
+    margin: 0 auto; }
+  ul.flexible_content-container .flexible_content .headline {
+    text-align: center;
+    padding: 1em; }
+    ul.flexible_content-container .flexible_content .headline p {
+      font-size: 1.6em;
+      color: #0b273b; }
+  ul.flexible_content-container .flexible_content .content_container {
+    background-color: #f8f8f8; }
+    ul.flexible_content-container .flexible_content .content_container .content_row {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 600px; }
+      @media only screen and (max-width: 767px) {
+        ul.flexible_content-container .flexible_content .content_container .content_row {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          height: auto; } }
+      ul.flexible_content-container .flexible_content .content_container .content_row .background_image {
+        padding: 0;
+        background-position: center;
+        background-size: cover; }
+      ul.flexible_content-container .flexible_content .content_container .content_row .overlay {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: 100%;
+        width: 100%; }
+        ul.flexible_content-container .flexible_content .content_container .content_row .overlay.blue {
+          background-color: rgba(98, 173, 227, 0.6); }
+        ul.flexible_content-container .flexible_content .content_container .content_row .overlay.orange {
+          background-color: rgba(224, 146, 69, 0.6); }
+        ul.flexible_content-container .flexible_content .content_container .content_row .overlay.green {
+          background-color: rgba(174, 213, 120, 0.6); }
+        ul.flexible_content-container .flexible_content .content_container .content_row .overlay img {
+          width: 90%;
+          height: auto; }
+      ul.flexible_content-container .flexible_content .content_container .content_row .content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 1em; }
+        ul.flexible_content-container .flexible_content .content_container .content_row .content p {
+          font-size: 1.6em; }
+          ul.flexible_content-container .flexible_content .content_container .content_row .content p strong {
+            font-size: 1.2em; }
+        ul.flexible_content-container .flexible_content .content_container .content_row .content.blue strong {
+          color: #62ade3; }
+        ul.flexible_content-container .flexible_content .content_container .content_row .content.orange strong {
+          color: #e09245; }
+        ul.flexible_content-container .flexible_content .content_container .content_row .content.green strong {
+          color: #aed578; }
 
 .ui-dialog.survey {
   width: 100% !important;
