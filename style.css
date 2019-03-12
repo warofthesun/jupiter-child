@@ -5,7 +5,7 @@ Description: Jupiter Child Theme
 Author: Dan Brown
 Author URL: http://thesplitpixel.com
 Template: jupiter
-Version: 1.0.8
+Version: 1.0.9
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
@@ -47,7 +47,8 @@ ul.flexible_content-container {
       ul.flexible_content-container .flexible_content .content_container .content_row .background_image {
         padding: 0;
         background-position: center;
-        background-size: cover; }
+        background-size: cover;
+        position: relative; }
       ul.flexible_content-container .flexible_content .content_container .content_row .overlay {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -68,7 +69,23 @@ ul.flexible_content-container {
           background-color: rgba(174, 213, 120, 0.6); }
         ul.flexible_content-container .flexible_content .content_container .content_row .overlay img {
           width: 90%;
-          height: auto; }
+          height: auto;
+          position: absolute; }
+        ul.flexible_content-container .flexible_content .content_container .content_row .overlay .detail_content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin-top: auto;
+          width: 100%;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+          ul.flexible_content-container .flexible_content .content_container .content_row .overlay .detail_content p {
+            font-size: .8em;
+            color: #ffffff;
+            width: 50%;
+            margin-bottom: .5em;
+            line-height: 1.1; }
       ul.flexible_content-container .flexible_content .content_container .content_row .content {
         display: -webkit-box;
         display: -ms-flexbox;

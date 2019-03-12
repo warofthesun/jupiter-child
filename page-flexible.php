@@ -41,7 +41,7 @@ if( have_rows('hero_section') ): ?>
 
 		<li class="flexible_content">
 				<div class="vc_row headline mk-grid">
-					<?php the_sub_field('headline'); ?>
+
 				</div>
 				<div class="content_container">
 					<div class="vc_row content_row mk-grid">
@@ -78,12 +78,16 @@ if( have_rows('hero_section') ): ?>
 
 
 								<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>" />
+								<div class="detail_content">
+									<?php the_sub_field('detail_content'); ?>
+								</div>
 							<?php endif; ?>
 						</div>
 					</div>
 					<div class="vc_col-xs-12 vc_col-md-5 content <?php the_sub_field('overlay_color'); ?>">
 						<div>
-							<?php the_sub_field('detail_content'); ?>
+							<?php the_sub_field('headline'); ?>
+
 						</div>
 					</div>
 				</div>
