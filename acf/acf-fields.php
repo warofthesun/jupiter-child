@@ -217,6 +217,25 @@ acf_add_local_field_group(array(
 	'title' => 'Flexible Content',
 	'fields' => array(
 		array(
+			'key' => 'field_5c871c913e088',
+			'label' => 'Intro Copy',
+			'name' => 'intro_copy',
+			'type' => 'wysiwyg',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'tabs' => 'all',
+			'toolbar' => 'full',
+			'media_upload' => 0,
+			'delay' => 0,
+		),
+		array(
 			'key' => 'field_5c7c804f103e1',
 			'label' => 'Hero Section',
 			'name' => 'hero_section',

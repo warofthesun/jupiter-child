@@ -29,8 +29,11 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
 </div>
 </div>
 </div>
-<?php
 
+<div class="vc_row headline mk-grid" style="margin:0 auto 2em;">
+<?php the_field('intro_copy'); ?>
+</div>
+<?php
 // check if the repeater field has rows of data
 if( have_rows('hero_section') ): ?>
 <ul class="flexible_content-container">
@@ -40,9 +43,7 @@ if( have_rows('hero_section') ): ?>
     while ( have_rows('hero_section') ) : the_row(); ?>
 
 		<li class="flexible_content">
-				<div class="vc_row headline mk-grid">
 
-				</div>
 				<div class="content_container">
 					<div class="vc_row content_row mk-grid">
 						<?php
