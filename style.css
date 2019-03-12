@@ -11,7 +11,8 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
 ul.flexible_content-container {
   margin: 0;
-  list-style-type: none; }
+  list-style-type: none;
+  background-color: #fff; }
   ul.flexible_content-container li {
     margin: 0;
     list-style-type: none;
