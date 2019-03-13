@@ -46,14 +46,15 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
 <?php get_footer(); ?>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <div id="dialog">
-  <h4 id="message">Drumroll please...<br />your healthcare engagement profile is…</h4>
-  <h1 id="result" class="result-<?php the_field('result_number'); ?>"><?php the_field('page_title'); ?>!</h1>
+  <h4 id="message">
+		<?php if(get_field('result_header') ) : the_field('result_header'); else : ?>Drumroll please...<br />your Wellview Consumer Connect profile is…<?php endif; ?></h4>
+  <h1 id="result" class="result-<?php the_field('result_number'); ?>"><?php if(get_field('result') ) : the_field('result'); else : the_field('page_title'); ?>!<?php endif; ?></h1>
 
   <div class="result">
     <div class="result-summary">
       <?php the_field('result_description'); ?>
     </div>
-  <a id="button" class="close_button" href="#">Learn more about your <strong><?php the_field('page_title'); ?></strong> profile</a>
+  <a id="button" class="close_button" href="#"><?php if(get_field('result_cta') ) : the_field('result_cta'); else : ?>Learn more about your <strong><?php the_field('page_title'); ?></strong> profile<?php endif; ?></a>
   <div class="result-email">
     <?php the_field('result_email'); ?>
   </div>
