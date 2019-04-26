@@ -47,4 +47,33 @@ include_once( get_stylesheet_directory() . '/acf/acf.php' );
 include( get_stylesheet_directory() . '/acf/acf-fields.php');
 
 
+// shortcode to get News items
+add_shortcode( 'wellview_news', 'wellview_news' );
+function wellview_news() {
+    $q = new WP_Query('pagename=news-and-resources');
+    while ($q->have_posts()) {
+        $q->the_post();
+        if( have_rows('news_items') ):
+          echo '<ul class="news__items">';
+        while ( have_rows('news_items') ) : the_row();
+        echo '<li class="news__items-item">';
+        $image = get_sub_field('thumbnail_image');
+        $size = 'image-size-550x550'; // (or thumbnail, or medium, or custom, the Image ID sizes are your oyster)
+        if( $image ) {
+        	echo wp_get_attachment_image( $image, $size );
+        }
+        $title = get_sub_field('title');
+        echo
+        "<div class='news__items-title'>" . $title . "</div>
+        </li>";
+        endwhile;
+        echo '</ul>';
+        else :
+        // no rows found
+        endif;
+    }
+    wp_reset_postdata();
+}
+
+
 ?>
