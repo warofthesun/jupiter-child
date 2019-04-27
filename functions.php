@@ -46,6 +46,7 @@ include_once( get_stylesheet_directory() . '/acf/acf.php' );
 
 include( get_stylesheet_directory() . '/acf/acf-fields.php');
 
+require_once( 'library/custom-post-type.php' );
 
 // shortcode to get News items
 add_shortcode( 'wellview_news', 'wellview_news' );

@@ -10,18 +10,9 @@ Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
 
-$blue: #62ade3;
-$blue-lt: lighten($blue, 30%);
-$blue-md: darken($blue, 30%);
-$blue-dk: darken($blue, 50%);
-$green: #aed578;
-$orange: #e09245;
+@import 'universal';
 
-$result-one: #23a9e1; //open to options
-$result-two: #1b76a0; //dr knows best
-$result-three: #f89520; //for the family
-$result-four: #8cc640; //healthy for life
-$result-five: #f8d82e; //live for today
+@import 'pages/news-resources';
 
 ul.flexible_content-container {
   margin: 0;
