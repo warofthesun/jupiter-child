@@ -11,7 +11,7 @@
 
   ._form-title {
     text-align: center;
-    color: $blue;
+    color: $blue-bright;
     font-size: 2em;
   }
 
@@ -56,16 +56,16 @@
     border: 0;
     background-color: transparent;
     font-weight: bold;
-    border: 1px solid $blue;
+    border: 1px solid $blue-bright;
     text-transform: uppercase;
-    color: $blue;
+    color: $blue-bright;
     margin: 0 auto;
     padding: .5em 1em;
     width: 200px;
     margin-bottom: 2em;
 
     &:hover {
-      background-color: $blue;
+      background-color: $blue-bright;
       color: white;
     }
   }
