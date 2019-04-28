@@ -1,7 +1,7 @@
 <!--wp archive-->
 <?php
 global $mk_options;
-wp_title('');
+
 echo "<div class='news_resources-archive'>";
 
 // Set the post type to 'post' when user is in the blog home page or date related archive page

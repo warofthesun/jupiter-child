@@ -1,0 +1,72 @@
+// FORMS
+
+._form_41 {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  ._form-title {
+    text-align: center;
+    color: $blue;
+    font-size: 2em;
+  }
+
+  ._html-code {
+    p {
+      text-align: center;
+      text-transform: uppercase;
+      color: $blue-dk;
+    }
+  }
+
+  ._form_element {
+    &._x60125866, &._x73044363 {
+      width: 49%;
+      display: inline-block;
+    }
+
+    &._field103 {
+      border-radius: 3px;
+      padding: 0 2em 1em;
+      background-color: rgba(white, 0.4);
+
+      ._form-label {
+        font-weight: 500;
+        color: $blue-dk;
+        font-size: 1.3em;
+        padding-top: 1em;
+        padding-bottom: 0;
+        margin-bottom: 1em;
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid lighten($blue, 20%);
+      }
+    }
+  }
+
+  ._button-wrapper {
+    text-align: center;
+  }
+
+  #_form_41_submit {
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    border: 1px solid $blue;
+    text-transform: uppercase;
+    color: $blue;
+    margin: 0 auto;
+    padding: .5em 1em;
+    width: 200px;
+    margin-bottom: 2em;
+
+    &:hover {
+      background-color: $blue;
+      color: white;
+    }
+  }
+}

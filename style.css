@@ -9,6 +9,99 @@ Version: 1.1.2
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
+.post-type-archive-news_resources .archive__title {
+  color: #62ade3 !important;
+  text-align: center;
+  margin-bottom: .5em; }
+
+.post-type-archive-news_resources .news_resources-archive section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .post-type-archive-news_resources .news_resources-archive section article {
+    width: 32%; }
+    .post-type-archive-news_resources .news_resources-archive section article .blog-meta-item, .post-type-archive-news_resources .news_resources-archive section article .blog-modern-social-section {
+      display: none; }
+    .post-type-archive-news_resources .news_resources-archive section article .mk-blog-meta {
+      margin-left: 20px; }
+    .post-type-archive-news_resources .news_resources-archive section article .the-excerpt {
+      display: none; }
+    .post-type-archive-news_resources .news_resources-archive section article .the-title {
+      text-transform: capitalize !important; }
+    .post-type-archive-news_resources .news_resources-archive section article div[id*='mk-button-'] {
+      background: white;
+      border: 1px solid #62ade3; }
+      .post-type-archive-news_resources .news_resources-archive section article div[id*='mk-button-']:hover {
+        background: #62ade3; }
+      .post-type-archive-news_resources .news_resources-archive section article div[id*='mk-button-'] a {
+        color: #62ade3; }
+
+div.pdfemb-viewer {
+  border: 0 !important; }
+
+div.pdfemb-poweredby {
+  display: none !important; }
+
+._form_41 {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  ._form_41 ._form-title {
+    text-align: center;
+    color: #62ade3;
+    font-size: 2em; }
+  ._form_41 ._html-code p {
+    text-align: center;
+    text-transform: uppercase;
+    color: #0b273b; }
+  ._form_41 ._form_element._x60125866, ._form_41 ._form_element._x73044363 {
+    width: 49%;
+    display: inline-block; }
+  ._form_41 ._form_element._field103 {
+    border-radius: 3px;
+    padding: 0 2em 1em;
+    background-color: rgba(255, 255, 255, 0.4); }
+    ._form_41 ._form_element._field103 ._form-label {
+      font-weight: 500;
+      color: #0b273b;
+      font-size: 1.3em;
+      padding-top: 1em;
+      padding-bottom: 0;
+      margin-bottom: 1em;
+      display: block;
+      text-align: center;
+      border-bottom: 1px solid #b9daf2; }
+  ._form_41 ._button-wrapper {
+    text-align: center; }
+  ._form_41 #_form_41_submit {
+    border: 0;
+    background-color: transparent;
+    font-weight: bold;
+    border: 1px solid #62ade3;
+    text-transform: uppercase;
+    color: #62ade3;
+    margin: 0 auto;
+    padding: .5em 1em;
+    width: 200px;
+    margin-bottom: 2em; }
+    ._form_41 #_form_41_submit:hover {
+      background-color: #62ade3;
+      color: white; }
+
 ul.flexible_content-container {
   margin: 0;
   list-style-type: none;
