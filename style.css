@@ -472,3 +472,18 @@ ul.flexible_content-container {
   @media only screen and (min-width: 992px) and (max-width: 1999px) {
     .psycographic_survey #wvhPsychographicPlugin {
       width: 500px; } }
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .footer-content li {
+    line-height: 1; }
+    .footer-content li a {
+      margin-bottom: 0; }

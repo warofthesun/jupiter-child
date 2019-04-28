@@ -503,7 +503,22 @@ label {
 @media only screen and (min-width: 992px) and (max-width: 1999px) {
   #wvhPsychographicPlugin {
     width: 500px; } }
+}
 
+// END Psychographic Survey styles
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    line-height: 1;
+
+    a {
+      margin-bottom: 0;
+    }
+  }
 }
 
 /*# sourceMappingURL=wvhPluginStyles.css.map */
