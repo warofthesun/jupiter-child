@@ -51,28 +51,32 @@ require_once( 'library/custom-post-type.php' );
 // shortcode to get News items
 add_shortcode( 'wellview_news', 'wellview_news' );
 function wellview_news() {
-    $q = new WP_Query('pagename=news-and-resources');
-    while ($q->have_posts()) {
-        $q->the_post();
-        if( have_rows('news_items') ):
-          echo '<ul class="news__items">';
-        while ( have_rows('news_items') ) : the_row();
-        echo '<li class="news__items-item">';
-        $image = get_sub_field('thumbnail_image');
-        $size = 'image-size-550x550'; // (or thumbnail, or medium, or custom, the Image ID sizes are your oyster)
-        if( $image ) {
-        	echo wp_get_attachment_image( $image, $size );
-        }
-        $title = get_sub_field('title');
-        echo
-        "<div class='news__items-title'>" . $title . "</div>
-        </li>";
-        endwhile;
-        echo '</ul>';
-        else :
-        // no rows found
-        endif;
+  $args = array (
+  	'post_type'              => array( 'news_resources' ),
+  	'post_status'            => array( 'publish' ),
+  	'order'                  => 'DSC',
+  	'orderby'                => 'post_order',
+    'posts_per_page'         => 4
+  );
+    echo "<ul class='news_resources__loop'>";
+    $loop = new WP_Query($args);
+
+    while ($loop->have_posts()) {
+        $loop->the_post();
+
+        echo "<li>";
+        echo "<a href='";
+        echo get_permalink();
+        echo "'>";
+        the_post_thumbnail('photo-album-thumbnail-square');
+        echo "</a><a href='";
+        echo get_permalink();
+        echo "' class='news_resources__title'>";
+        the_title();
+        echo "</a></li>";
+
     }
+    echo "</ul>";
     wp_reset_postdata();
 }
 

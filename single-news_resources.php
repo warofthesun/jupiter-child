@@ -8,16 +8,14 @@ get_header('news_resources'); ?>
 <!--NEWS RESOURCES-->
 <?php
 								$image = get_field('page_header');
-								// vars
 								$url = $image['url'];
-								// thumbnail
 								$size = 'header-image';
 								$thumb = $image['sizes'][ $size ];
 								$width = $image['sizes'][ $size . '-width' ];
 								$height = $image['sizes'][ $size . '-height' ];
 								?>
 
-<div style="background:url(<?php echo $thumb; ?>);" class="header-bg">
+<div style="background:url(<?php echo $thumb; ?>);" class="header-bg remove-margin__bottom">
 <div class="overlay">
   <h1><?php if( get_field('page_title') ) : the_field('page_title'); else : echo the_title(); endif; ?></h1>
   <?php if( get_field('page_subtitle') ) : ?>
