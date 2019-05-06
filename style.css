@@ -5,7 +5,7 @@ Description: Jupiter Child Theme
 Author: Dan Brown
 Author URL: http://thesplitpixel.com
 Template: jupiter
-Version: 1.1.7
+Version: 1.1.8
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
@@ -141,7 +141,8 @@ div.pdfemb-poweredby {
 .mk-main-navigation ul.sub-menu {
   margin-top: -2em;
   margin-right: -50%;
-  background-color: transparent !important; }
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-radius: 0 0 3px 3px; }
 
 .main-navigation-ul > li.no-mega-menu ul.sub-menu li.menu-item a.menu-item-link {
   text-align: center;
