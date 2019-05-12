@@ -5,7 +5,7 @@ Description: Jupiter Child Theme
 Author: Dan Brown
 Author URL: http://thesplitpixel.com
 Template: jupiter
-Version: 1.1.8
+Version: 1.1.9
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
@@ -13,6 +13,8 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 @import 'universal';
 
 @import 'pages/news-resources';
+@import 'pages/psychographic';
+@import 'pages/concierge-contact';
 
 @import 'forms/forms';
 
@@ -35,12 +37,17 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
   }
 }
 
+.vc_separator {
+  h4 {
+    text-align: center;;
+  }
+}
+
 .remove-margin {
   &__bottom {
     margin-bottom: 0 !important;
   }
 }
-
 
 ul.flexible_content-container {
   margin: 0;
@@ -338,199 +345,6 @@ ul.flexible_content-container {
   margin: 0 !important;
 }
 
-.psycographic_survey {
-
-  .header-bg {
-    margin-bottom: 5em;
-
-    @media only screen and (min-width: 64em) {
-      height: 70vh;
-      max-height: 550px;
-    }
-
-    width: 100%;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .overlay {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0,0,0,0.4);
-
-    h1 {
-      font-size: 3.5em;
-      font-weight: bold;
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-      text-align: center;
-
-      @media only screen and (max-width: 64em) {
-        margin: 1em 0;
-      }
-    }
-
-    h2 {
-      color: #fff;
-
-      @media only screen and (min-width: 64em) {
-        width: 80vw;
-      }
-
-      max-width: 1200px;
-      text-align: center;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    li {
-      &:before {
-        content: "\f058";
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 400;
-        color: $green;
-        margin-right: .5em;
-      }
-    }
-  }
-
-  blockquote {
-    padding: 2em 2em 1em;
-    border-radius: .5em;
-
-    p {
-      font-size: 1.5em;
-      text-align: center;
-
-      &:before, &:after {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 600;
-        color: rgba(0,0,0, 0.1);
-      }
-
-      &:before {
-        content: "\f10d";
-      }
-
-      &:after {
-        content: "\f10e";
-      }
-    }
-  }
-
-.wvhButton {
-  background-color: #a2cf65;
-  color: white;
-  padding: 10px 20px;
-  border: 0px;
-  margin-top: 20px; }
-
-#wvhPsychographicPlugin {
-  width: 500px;
-  margin: 20px auto;
-  clear: both; }
-
-.wvhButton:hover {
-  background-color: #97c06d; }
-
-label {
-  font-weight: bold;
-  line-height: normal; }
-
-#wvhPaywall label {
-  display: block;
-  width: 140px;
-  text-align: left;
-  padding-right: 20px;
-  margin-top: .5em; }
-
-#wvhPaywall input {
-  width: 100%;
-  border-radius: 3px;
-  margin: .5em 0 1em;
-  background: #f6f6f6;
-  padding: 10px; }
-
-#wvhSurvey label {
-  display: block;
-  margin-bottom: .5em; }
-
-.wvhRadioWrapper {
-  margin: 1em;
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-weight: normal; }
-  .wvhRadioWrapper input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0; }
-  .wvhRadioWrapper .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-    border-radius: 50%; }
-    .wvhRadioWrapper .checkmark:after {
-      content: "";
-      position: absolute;
-      display: none;
-      top: 6px;
-      left: 6px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #1a6092; }
-  .wvhRadioWrapper:hover input ~ .checkmark {
-    background-color: #ccc; }
-  .wvhRadioWrapper input:checked ~ .checkmark {
-    background-color: #62ade3; }
-  .wvhRadioWrapper input:checked ~ .checkmark:after {
-    display: block; }
-
-.wvhQuestion {
-  border-bottom: 1px solid rgba(6, 24, 36, 0.11);
-  margin-bottom: 2em;
-  padding-bottom: 2em; }
-
-#question-12 {
-  border-bottom: 0px; }
-
-/* Phones */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-  #wvhPsychographicPlugin {
-    width: 300px; } }
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  #wvhPsychographicPlugin {
-    width: 400px; } }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  #wvhPsychographicPlugin {
-    width: 500px; } }
-@media only screen and (min-width: 992px) and (max-width: 1999px) {
-  #wvhPsychographicPlugin {
-    width: 500px; } }
-}
-
-// END Psychographic Survey styles
-
 .footer-content {
   display: flex;
   justify-content: center;
@@ -565,4 +379,71 @@ label {
   }
 }
 
-/*# sourceMappingURL=wvhPluginStyles.css.map */
+.animation__1sec {
+ animation: mk_right_to_left 1s 1 cubic-bezier(.77,0,.175,1) !important;
+}
+
+.animation__1-5sec {
+ animation: mk_right_to_left 1.5s 1 cubic-bezier(.77,0,.175,1) !important;
+}
+
+.animation__2sec {
+ animation: mk_right_to_left 2s 1 cubic-bezier(.77,0,.175,1) !important;
+}
+
+.animation__2-5sec {
+ animation: mk_right_to_left 2.5s 1 cubic-bezier(.77,0,.175,1) !important;
+}
+
+// Twitter Feed
+
+#ctf {
+  overflow-y: inherit;
+
+  .ctf {
+    &-tweets {
+      display: flex;
+      flex-direction: column;
+
+      @media screen and (min-width:768px) {
+        flex-direction: row;
+      }
+    }
+
+    &-item {
+      border-top: none;
+      width: 100%;
+      background: white;
+
+      @media screen and (min-width:768px) {
+        width: calc(1/3 * 100%);
+      }
+      padding: 2em;
+      border-radius: 6px;
+      box-shadow: 0 0 6px 2px rgba(0,0,0,0.2);
+      margin-right: 2em;
+      margin-bottom: 2em;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    &-author-box {
+      display: flex;
+      margin-bottom: 1em;
+    }
+
+    &-author-name {
+      display: block;
+    }
+
+    &-tweet-content, &-tweet-actions {
+      margin-left: 0;
+    }
+
+    &-tweet-text {
+      font-size: 15px;
+    }
+  }
+}

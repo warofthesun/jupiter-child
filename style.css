@@ -5,10 +5,16 @@ Description: Jupiter Child Theme
 Author: Dan Brown
 Author URL: http://thesplitpixel.com
 Template: jupiter
-Version: 1.1.8
+Version: 1.1.9
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
+sup {
+  font-size: .5em; }
+
+sup {
+  font-size: .5em; }
+
 .news_resources__loop {
   list-style: none;
   padding: 0;
@@ -80,6 +86,179 @@ div.pdfemb-viewer {
 div.pdfemb-poweredby {
   display: none !important; }
 
+.psycographic_survey {
+  /* Phones */ }
+  .psycographic_survey .header-bg {
+    margin-bottom: 5em;
+    width: 100%;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media only screen and (min-width: 64em) {
+      .psycographic_survey .header-bg {
+        height: 70vh;
+        max-height: 550px; } }
+  .psycographic_survey .overlay {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: rgba(0, 0, 0, 0.4); }
+    .psycographic_survey .overlay h1 {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      text-align: center; }
+      @media only screen and (max-width: 64em) {
+        .psycographic_survey .overlay h1 {
+          margin: 1em 0; } }
+    .psycographic_survey .overlay h2 {
+      color: #fff;
+      max-width: 1200px;
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
+      @media only screen and (min-width: 64em) {
+        .psycographic_survey .overlay h2 {
+          width: 80vw; } }
+  .psycographic_survey ul {
+    list-style-type: none; }
+    .psycographic_survey ul li:before {
+      content: "\f058";
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 400;
+      color: #aed578;
+      margin-right: .5em; }
+  .psycographic_survey blockquote {
+    padding: 2em 2em 1em;
+    border-radius: .5em; }
+    .psycographic_survey blockquote p {
+      font-size: 1.5em;
+      text-align: center; }
+      .psycographic_survey blockquote p:before, .psycographic_survey blockquote p:after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.1); }
+      .psycographic_survey blockquote p:before {
+        content: "\f10d"; }
+      .psycographic_survey blockquote p:after {
+        content: "\f10e"; }
+  .psycographic_survey .wvhButton {
+    background-color: #a2cf65;
+    color: white;
+    padding: 10px 20px;
+    border: 0px;
+    margin-top: 20px; }
+  .psycographic_survey #wvhPsychographicPlugin {
+    width: 500px;
+    margin: 20px auto;
+    clear: both; }
+  .psycographic_survey .wvhButton:hover {
+    background-color: #97c06d; }
+  .psycographic_survey label {
+    font-weight: bold;
+    line-height: normal; }
+  .psycographic_survey #wvhPaywall label {
+    display: block;
+    width: 140px;
+    text-align: left;
+    padding-right: 20px;
+    margin-top: .5em; }
+  .psycographic_survey #wvhPaywall input {
+    width: 100%;
+    border-radius: 3px;
+    margin: .5em 0 1em;
+    background: #f6f6f6;
+    padding: 10px; }
+  .psycographic_survey #wvhSurvey label {
+    display: block;
+    margin-bottom: .5em; }
+  .psycographic_survey .wvhRadioWrapper {
+    margin: 1em;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-weight: normal; }
+  .psycographic_survey .wvhRadioWrapper input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .psycographic_survey .wvhRadioWrapper .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%; }
+  .psycographic_survey .wvhRadioWrapper .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1a6092; }
+  .psycographic_survey .wvhRadioWrapper:hover input ~ .checkmark {
+    background-color: #ccc; }
+  .psycographic_survey .wvhRadioWrapper input:checked ~ .checkmark {
+    background-color: #62ade3; }
+  .psycographic_survey .wvhRadioWrapper input:checked ~ .checkmark:after {
+    display: block; }
+  .psycographic_survey .wvhQuestion {
+    border-bottom: 1px solid rgba(6, 24, 36, 0.11);
+    margin-bottom: 2em;
+    padding-bottom: 2em; }
+  .psycographic_survey #question-12 {
+    border-bottom: 0px; }
+  @media only screen and (min-width: 320px) and (max-width: 479px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 300px; } }
+  @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 400px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 500px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1999px) {
+    .psycographic_survey #wvhPsychographicPlugin {
+      width: 500px; } }
+
+h2.header--concierge-contact {
+  font-size: 2.5em;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(53, 41, 36, 0.52);
+  margin-top: -1em; }
+
 ._form_41 {
   width: 100%;
   max-width: 650px;
@@ -110,7 +289,10 @@ div.pdfemb-poweredby {
   ._form_41 ._form_element._field103 {
     border-radius: 3px;
     padding: 0 2em 1em;
-    background-color: rgba(255, 255, 255, 0.4); }
+    background-color: rgba(0, 0, 0, 0.1);
+    float: left;
+    width: 100%;
+    margin-bottom: 2em; }
     ._form_41 ._form_element._field103 ._form-label {
       font-weight: 500;
       color: #0b273b;
@@ -138,6 +320,29 @@ div.pdfemb-poweredby {
       background-color: #3796db;
       color: white; }
 
+.styled-form {
+  float: none;
+  margin: auto; }
+
+.styled-form ._form-content ._form_element input[type="text"] {
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #105c7b; }
+
+.styled-form ._form-content ._button-wrapper button {
+  border: 0;
+  background: #a2cf65;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 6px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: block; }
+
+._x98162240 ._form-title {
+  background-color: red; }
+
 .mk-main-navigation ul.sub-menu {
   margin-top: -2em;
   margin-right: -50%;
@@ -150,6 +355,9 @@ div.pdfemb-poweredby {
   color: #3796db; }
   .main-navigation-ul > li.no-mega-menu ul.sub-menu li.menu-item a.menu-item-link:hover {
     color: #0b273b !important; }
+
+.vc_separator h4 {
+  text-align: center; }
 
 .remove-margin__bottom {
   margin-bottom: 0 !important; }
@@ -358,173 +566,6 @@ ul.flexible_content-container {
 .five-col-wrap .five-col-last {
   margin: 0 !important; }
 
-.psycographic_survey {
-  /* Phones */ }
-  .psycographic_survey .header-bg {
-    margin-bottom: 5em;
-    width: 100%;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-position: center !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    @media only screen and (min-width: 64em) {
-      .psycographic_survey .header-bg {
-        height: 70vh;
-        max-height: 550px; } }
-  .psycographic_survey .overlay {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: rgba(0, 0, 0, 0.4); }
-    .psycographic_survey .overlay h1 {
-      font-size: 3.5em;
-      font-weight: bold;
-      color: #fff;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-      text-align: center; }
-      @media only screen and (max-width: 64em) {
-        .psycographic_survey .overlay h1 {
-          margin: 1em 0; } }
-    .psycographic_survey .overlay h2 {
-      color: #fff;
-      max-width: 1200px;
-      text-align: center;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); }
-      @media only screen and (min-width: 64em) {
-        .psycographic_survey .overlay h2 {
-          width: 80vw; } }
-  .psycographic_survey ul {
-    list-style-type: none; }
-    .psycographic_survey ul li:before {
-      content: "\f058";
-      font-family: 'Font Awesome 5 Free';
-      font-weight: 400;
-      color: #aed578;
-      margin-right: .5em; }
-  .psycographic_survey blockquote {
-    padding: 2em 2em 1em;
-    border-radius: .5em; }
-    .psycographic_survey blockquote p {
-      font-size: 1.5em;
-      text-align: center; }
-      .psycographic_survey blockquote p:before, .psycographic_survey blockquote p:after {
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 600;
-        color: rgba(0, 0, 0, 0.1); }
-      .psycographic_survey blockquote p:before {
-        content: "\f10d"; }
-      .psycographic_survey blockquote p:after {
-        content: "\f10e"; }
-  .psycographic_survey .wvhButton {
-    background-color: #a2cf65;
-    color: white;
-    padding: 10px 20px;
-    border: 0px;
-    margin-top: 20px; }
-  .psycographic_survey #wvhPsychographicPlugin {
-    width: 500px;
-    margin: 20px auto;
-    clear: both; }
-  .psycographic_survey .wvhButton:hover {
-    background-color: #97c06d; }
-  .psycographic_survey label {
-    font-weight: bold;
-    line-height: normal; }
-  .psycographic_survey #wvhPaywall label {
-    display: block;
-    width: 140px;
-    text-align: left;
-    padding-right: 20px;
-    margin-top: .5em; }
-  .psycographic_survey #wvhPaywall input {
-    width: 100%;
-    border-radius: 3px;
-    margin: .5em 0 1em;
-    background: #f6f6f6;
-    padding: 10px; }
-  .psycographic_survey #wvhSurvey label {
-    display: block;
-    margin-bottom: .5em; }
-  .psycographic_survey .wvhRadioWrapper {
-    margin: 1em;
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-weight: normal; }
-  .psycographic_survey .wvhRadioWrapper input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0; }
-  .psycographic_survey .wvhRadioWrapper .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-    border-radius: 50%; }
-  .psycographic_survey .wvhRadioWrapper .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-    top: 6px;
-    left: 6px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #1a6092; }
-  .psycographic_survey .wvhRadioWrapper:hover input ~ .checkmark {
-    background-color: #ccc; }
-  .psycographic_survey .wvhRadioWrapper input:checked ~ .checkmark {
-    background-color: #62ade3; }
-  .psycographic_survey .wvhRadioWrapper input:checked ~ .checkmark:after {
-    display: block; }
-  .psycographic_survey .wvhQuestion {
-    border-bottom: 1px solid rgba(6, 24, 36, 0.11);
-    margin-bottom: 2em;
-    padding-bottom: 2em; }
-  .psycographic_survey #question-12 {
-    border-bottom: 0px; }
-  @media only screen and (min-width: 320px) and (max-width: 479px) {
-    .psycographic_survey #wvhPsychographicPlugin {
-      width: 300px; } }
-  @media only screen and (min-width: 480px) and (max-width: 767px) {
-    .psycographic_survey #wvhPsychographicPlugin {
-      width: 400px; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
-    .psycographic_survey #wvhPsychographicPlugin {
-      width: 500px; } }
-  @media only screen and (min-width: 992px) and (max-width: 1999px) {
-    .psycographic_survey #wvhPsychographicPlugin {
-      width: 500px; } }
-
 .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -556,3 +597,62 @@ ul.flexible_content-container {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; }
+
+.animation__1sec {
+  -webkit-animation: mk_right_to_left 1s 1 cubic-bezier(0.77, 0, 0.175, 1) !important;
+          animation: mk_right_to_left 1s 1 cubic-bezier(0.77, 0, 0.175, 1) !important; }
+
+.animation__1-5sec {
+  -webkit-animation: mk_right_to_left 1.5s 1 cubic-bezier(0.77, 0, 0.175, 1) !important;
+          animation: mk_right_to_left 1.5s 1 cubic-bezier(0.77, 0, 0.175, 1) !important; }
+
+.animation__2sec {
+  -webkit-animation: mk_right_to_left 2s 1 cubic-bezier(0.77, 0, 0.175, 1) !important;
+          animation: mk_right_to_left 2s 1 cubic-bezier(0.77, 0, 0.175, 1) !important; }
+
+.animation__2-5sec {
+  -webkit-animation: mk_right_to_left 2.5s 1 cubic-bezier(0.77, 0, 0.175, 1) !important;
+          animation: mk_right_to_left 2.5s 1 cubic-bezier(0.77, 0, 0.175, 1) !important; }
+
+#ctf {
+  overflow-y: inherit; }
+  #ctf .ctf-tweets {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    @media screen and (min-width: 768px) {
+      #ctf .ctf-tweets {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; } }
+  #ctf .ctf-item {
+    border-top: none;
+    width: 100%;
+    background: white;
+    padding: 2em;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.2);
+    margin-right: 2em;
+    margin-bottom: 2em; }
+    @media screen and (min-width: 768px) {
+      #ctf .ctf-item {
+        width: calc(1/3 * 100%); } }
+    #ctf .ctf-item:last-of-type {
+      margin-right: 0; }
+  #ctf .ctf-author-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1em; }
+  #ctf .ctf-author-name {
+    display: block; }
+  #ctf .ctf-tweet-content, #ctf .ctf-tweet-actions {
+    margin-left: 0; }
+  #ctf .ctf-tweet-text {
+    font-size: 15px; }

@@ -32,7 +32,10 @@
     &._field103 {
       border-radius: 3px;
       padding: 0 2em 1em;
-      background-color: rgba(white, 0.4);
+      background-color: rgba(0,0,0, 0.1);
+      float: left;
+      width: 100%;
+      margin-bottom: 2em;
 
       ._form-label {
         font-weight: 500;
@@ -70,3 +73,28 @@
     }
   }
 }
+
+.styled-form {
+  float:none;
+  margin:auto;
+}
+
+.styled-form ._form-content ._form_element input[type="text"] {
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #105c7b;
+}
+
+.styled-form ._form-content ._button-wrapper button {
+  border: 0;
+  background: #a2cf65;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 6px;
+  margin: auto;
+  margin-bottom:20px;
+  display:block;
+}
+
+._x98162240 ._form-title {background-color:red;}
