@@ -5,7 +5,7 @@ Description: Jupiter Child Theme
 Author: Dan Brown
 Author URL: http://thesplitpixel.com
 Template: jupiter
-Version: 1.1.9
+Version: 1.2.0
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
@@ -575,11 +575,49 @@ ul.flexible_content-container {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .footer-content li {
     line-height: 1; }
+    @media only screen and (max-width: 768px) {
+      .footer-content li.break {
+        width: 100%;
+        margin-bottom: 1em; } }
     .footer-content li a {
       margin-bottom: 0; }
+
+#mk-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  #mk-footer .footer-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+
+#sub-footer {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  #sub-footer .mk-footer-copyright {
+    display: none; }
+  #sub-footer .footer_menu ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold; }
 
 .sidebar-social ul {
   display: -webkit-box;
