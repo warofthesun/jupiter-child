@@ -1,7 +1,4 @@
 <?php
-/*
- Template Name: Image Header
-*/
 
 get_header('news_resources'); ?>
 <div class="psycographic_survey">
