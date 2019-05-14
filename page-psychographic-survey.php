@@ -1,10 +1,10 @@
 <?php
 /*
- Template Name: Image Header
+ Template Name: Psychographic Survey 
 */
 
 get_header(); ?>
-<div class="image-header">
+<div class="psycographic_survey image-header">
 <?php
 Mk_Static_Files::addAssets('mk_button');
 Mk_Static_Files::addAssets('mk_audio');

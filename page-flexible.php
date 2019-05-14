@@ -4,7 +4,7 @@
 */
 
 get_header(); ?>
-<div class="psycographic_survey">
+<div class="image-header">
 <?php
 Mk_Static_Files::addAssets('mk_button');
 Mk_Static_Files::addAssets('mk_audio');

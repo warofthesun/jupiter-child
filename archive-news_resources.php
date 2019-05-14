@@ -18,7 +18,7 @@ while($custom_query->have_posts()) : $custom_query->the_post(); ?>
   $width = $image['sizes'][ $size . '-width' ];
   $height = $image['sizes'][ $size . '-height' ];
 ?>
-<div class="psycographic_survey">
+<div class="image-header">
   <div style="background:url(<?php echo $master; ?>);" class="header-bg">
     <div class="overlay">
       <h1><?php if( get_field('page_title') ) : the_field('page_title'); else : echo the_title(); endif; ?></h1>

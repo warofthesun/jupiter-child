@@ -1,7 +1,7 @@
 <?php
 
 get_header('news_resources'); ?>
-<div class="psycographic_survey">
+<div class="image-header">
 <!--NEWS RESOURCES-->
 <?php
 								$image = get_field('page_header');
