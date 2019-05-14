@@ -89,6 +89,13 @@ acf_add_local_field_group(array(
 				'value' => 'page-flexible.php',
 			),
 		),
+		array(
+			array(
+				'param' => 'page_template',
+				'operator' => '==',
+				'value' => 'page-psychographic-survey.php',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'acf_after_title',
