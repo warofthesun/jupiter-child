@@ -5,7 +5,7 @@ Description: Jupiter Child Theme
 Author: Dan Brown
 Author URL: http://thesplitpixel.com
 Template: jupiter
-Version: 1.2.7
+Version: 1.2.8
 Text Domain: jupiter-child
 GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 */
@@ -16,6 +16,7 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
 @import 'pages/psychographic';
 @import 'pages/concierge-contact';
 @import 'pages/image-header';
+@import 'pages/flexible-content';
 
 @import 'forms/forms';
 
@@ -42,6 +43,16 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
   }
 }
 
+.homeHeader {
+
+  p {
+    @media only screen and (max-width: 767px) {
+      font-size: 30px !important;
+      line-height: 1.3 !important;
+    }
+  }
+}
+
 .vc_separator {
   h4 {
     text-align: center;;
@@ -52,145 +63,6 @@ GitHub Theme URI: https://github.com/warofthesun/jupiter-child
   &__bottom {
     margin-bottom: 0 !important;
   }
-}
-
-ul.flexible_content-container {
-  margin: 0;
-  list-style-type: none;
-  background-color: #fff;
-
-
-    li {
-      margin: 0;
-      list-style-type: none;
-      margin-top: 3em;
-
-      &:first-of-type {
-        margin-top: 0;
-      }
-
-      &:nth-of-type(even) {
-        .content_row {
-          flex-direction: row-reverse;
-        }
-      }
-    }
-
-  .flexible_content {
-  .mk-grid {
-    margin: 0 auto;
-  }
-
-  .headline {
-    text-align: center;
-    padding: 1em;
-
-    p {
-      font-size: 1.6em;
-      color: $blue-dk;
-    }
-  }
-
-  .content_container {
-    background-color: #f8f8f8;
-
-    .content_row {
-      display:flex;
-
-      @media only screen and (max-width: 767px) {
-        flex-wrap: wrap;
-        height: auto;
-      }
-
-      height:600px;
-
-      .background_image {
-        padding:0;
-        background-position: center;
-        background-size: cover;
-        position: relative;
-
-        @media only screen and (max-width: 767px) {
-          height: 500px;
-        }
-      }
-
-      .overlay {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-
-        &.blue {
-          background-color:rgba($blue, 0.6);
-        }
-
-        &.orange {
-          background-color:rgba($orange, 0.6);
-        }
-
-        &.green {
-          background-color:rgba($green, 0.6);
-        }
-
-        img {
-          width: 90%;
-          height: auto;
-          position: absolute;
-        }
-
-        .detail_content {
-          display: flex;
-          margin-top: auto;
-          width: 100%;
-          justify-content: space-between;
-
-          p {
-            font-size: .8em;
-            color: #ffffff;
-            width: 50%;
-            margin-bottom: .5em;
-            line-height: 1.1;
-          }
-        }
-      }
-
-      .content {
-        display: flex;
-        justify-content: center;
-        align-items:center;
-        padding: 1em;
-
-        p {
-          font-size: 1.6em;
-
-          strong {
-            font-size: 1.2em;
-          }
-        }
-
-        &.blue {
-          strong {
-            color: $blue;
-          }
-        }
-
-        &.orange {
-          strong {
-            color: $orange;
-          }
-        }
-
-        &.green {
-          strong {
-            color: $green;
-          }
-        }
-      }
-    }
-  }
-}
 }
 
 .employee-grid {
@@ -246,6 +118,7 @@ ul.flexible_content-container {
 }
 
 // End Testimonial Styles
+
 .signup-redirect-btn {
   margin-bottom: 0;
 }
@@ -493,44 +366,7 @@ ul.flexible_content-container {
   }
 }
 
-.sidebar-social {
-  ul {
-    display: flex;
-
-    li {
-      &:first-of-type {
-        order: 3;
-      }
-
-      &:nth-of-type(2) {
-        order: 2;
-      }
-
-      &:nth-of-type(3) {
-        order: 1;
-      }
-    }
-  }
-}
-
-.animation__1sec {
- animation: mk_right_to_left 1s 1 cubic-bezier(.77,0,.175,1) !important;
-}
-
-.animation__1-5sec {
- animation: mk_right_to_left 1.5s 1 cubic-bezier(.77,0,.175,1) !important;
-}
-
-.animation__2sec {
- animation: mk_right_to_left 2s 1 cubic-bezier(.77,0,.175,1) !important;
-}
-
-.animation__2-5sec {
- animation: mk_right_to_left 2.5s 1 cubic-bezier(.77,0,.175,1) !important;
-}
-
 // Twitter Feed
-
 #ctf {
   overflow-y: inherit;
 
@@ -581,3 +417,4 @@ ul.flexible_content-container {
     }
   }
 }
+// End Twitter Feed

@@ -1,11 +1,14 @@
 .image-header {
+  position: relative;
+  z-index: 50;
+  
   .header-bg {
     margin-bottom: 2em;
 
     @media only screen and (min-width: 64em) {
       height: 70vh;
       max-height: 550px;
-      margin-bottom: 3em;
+      margin-bottom: 0em;
     }
 
     width: 100%;
