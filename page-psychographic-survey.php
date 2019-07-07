@@ -1,6 +1,6 @@
 <?php
 /*
- Template Name: Psychographic Survey 
+ Template Name: Psychographic Survey
 */
 
 get_header(); ?>
@@ -33,9 +33,14 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
     <script>
     jQuery(document).ready(function($) {
           $("#dialog").dialog({ autoOpen: false, modal: true, dialogClass: 'survey',  position: { my: "center", at: "top" } });
+					$("#dialog-2").dialog({ autoOpen: false, modal: true, dialogClass: 'survey',  position: { my: "center", at: "top" } });
 
           if(window.location.href.indexOf('?result=1') != -1) {
           $('#dialog').dialog('open');
+          }
+
+					if(window.location.href.indexOf('?result=2') != -1) {
+          $('#dialog-2').dialog('open');
           }
 
           $(".close_button").click(function () {
@@ -49,7 +54,7 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
   <h4 id="message">
 		<?php if(get_field('result_header') ) : the_field('result_header'); else : ?>Drumroll please...<br />your Wellview Consumer Connect profile is…<?php endif; ?></h4>
   <h1 id="result" class="result-<?php the_field('result_number'); ?>"><?php if(get_field('result') ) : the_field('result'); else : the_field('page_title'); ?>!<?php endif; ?></h1>
-
+		page psychographic survey
   <div class="result">
     <div class="result-summary">
       <?php the_field('result_description'); ?>
@@ -58,4 +63,14 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
   <div class="result-email">
     <?php the_field('result_email'); ?>
   </div>
+</div>
+<div id="dialog-2">
+  <h4 id="message">Wow! Your personality is:</h4>
+  <h1 id="result" class="result-1">HEALTHY FOR LIFE!</h1>
+  <div class="result">
+    <div class="result-summary">
+      Like 19% of Americans, you tend to be proactive, ambitious, and highly conscious about your health & image.
+			<br /><br />
+			<i style="font-size:.9em;">Keep an eye on your inbox for more details about your personality, along with tips from your friends at Wellview for becoming your best you ever!</i>
+    </div>
 </div>
