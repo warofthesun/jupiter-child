@@ -14,7 +14,7 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
 								// vars
 								$url = $image['url'];
 								// thumbnail
-								$size = 'header-image';
+								$size = 'large';
 								$thumb = $image['sizes'][ $size ];
 								$width = $image['sizes'][ $size . '-width' ];
 								$height = $image['sizes'][ $size . '-height' ];
