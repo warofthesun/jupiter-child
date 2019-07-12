@@ -33,14 +33,9 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
     <script>
     jQuery(document).ready(function($) {
           $("#dialog").dialog({ autoOpen: false, modal: true, dialogClass: 'survey',  position: { my: "center", at: "top" } });
-					$("#dialog-2").dialog({ autoOpen: false, modal: true, dialogClass: 'survey',  position: { my: "center", at: "top" } });
 
           if(window.location.href.indexOf('?result=1') != -1) {
           $('#dialog').dialog('open');
-          }
-
-					if(window.location.href.indexOf('?result=2') != -1) {
-          $('#dialog-2').dialog('open');
           }
 
           $(".close_button").click(function () {
@@ -64,13 +59,28 @@ Mk_Static_Files::addAssets('mk_swipe_slideshow'); ?>
     <?php the_field('result_email'); ?>
   </div>
 </div>
-<div id="dialog-2">
-  <h4 id="message">Wow! Your personality is:</h4>
-  <h1 id="result" class="result-1">HEALTHY FOR LIFE!</h1>
-  <div class="result">
-    <div class="result-summary">
-      Like 19% of Americans, you tend to be proactive, ambitious, and highly conscious about your health & image.
-			<br /><br />
-			<i style="font-size:.9em;">Keep an eye on your inbox for more details about your personality, along with tips from your friends at Wellview for becoming your best you ever!</i>
-    </div>
+<?php if( have_rows('result_pop-ups') ): ?>
+<div id="quiz-result">
+   <?php while ( have_rows('result_pop-ups') ) : the_row(); ?>
+		<?php $results = get_sub_field('result_number'); ?>
+		<div id="<?php echo $results['value']; ?>" class="dynamic-results">
+			<h4 id="message"><?php the_field('intro');?></h4>
+	    <h1 id="result" class="result-<?php echo $results['label']; ?>"><?php the_sub_field('result_name'); ?></h1>
+	    <div class="result">
+	      <div class="result-summary">
+	        <?php the_sub_field('result_description'); ?>
+	  			<?php $link = get_field('cta_button'); ?>
+					<?php if( $link) :
+						$link_url = $link['url'];
+						$link_title = $link['title'];
+						$link_target = $link['target'] ? $link['target'] : '_self';
+					?>
+					<a href="<?php echo $link_url; ?>" class="wvhButton" style="float:none;margin-bottom:2em;display:inline-block;"><?php echo $link_title; ?></a>
+					<?php endif; ?>
+	  			<i style="font-size:.9em;"><?php the_field('wrap_up'); ?></i>
+	      </div>
+	  	</div>
+	  </div>
+	<?php  endwhile; else : ?>
 </div>
+<?php endif; ?>
